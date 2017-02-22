@@ -1,0 +1,35 @@
+<DOCTYPE HTML>
+<html>
+        <head>
+                <title>Learning to code</title>
+                <script>
+                        window.onload = function(){
+                                document.getElementById("name").addEventListener("keyup", print);
+                                document.getElementById("btn").addEventListener("click", alertStuff);
+                                
+                                function print(){
+                                        name = document.getElementById("name").value;
+                                        list = document.getElementById("list");
+                                        list.innerHTML = "<span style='color:red'>" +  name.toUpperCase() + "</span>";
+                                        }
+                                function alertStuff(){
+                                        window.alert(name)
+                                }
+                        }
+                </script>
+        </head>
+
+        <body>
+                <h1>Welcome</h1>
+
+                <form>
+                        What is your name?<br>
+                        <input type="text" id="name" autocomplete="off" autofocus>
+                        <input type="submit" id="btn">
+                </form>
+
+                <ul id="list"></ul>
+        </body>
+</html>
+
+
